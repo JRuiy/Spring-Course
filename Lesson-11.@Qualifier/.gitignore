@@ -1,0 +1,25 @@
+# Default excludes
+
+# Binaries
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.war
+*.ear
+*.sar
+*.class
+*.xml
+
+
+# eclipse project file
+.settings/
+.classpath
+.project
+.idea
+/target/*
+../../README.md
