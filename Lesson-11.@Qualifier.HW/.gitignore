@@ -1,0 +1,5 @@
+# Default ignored files
+/shelf/
+.idea
+../Lesson-10.@Autowired/target/*
+/target/*
