@@ -9,6 +9,7 @@ import ua.lviv.springlearn.dao.PersonDAO;
 import ua.lviv.springlearn.models.Person;
 
 import javax.validation.Valid;
+import java.sql.SQLException;
 
 @Controller
 @RequestMapping("/people")
@@ -22,7 +23,7 @@ public class PeopleController {
     }
 
     @GetMapping()
-    public String index(Model model){
+    public String index(Model model) throws SQLException {
         model.addAttribute("people", personDAO.index());
         return "people/index";
     }
@@ -39,7 +40,7 @@ public class PeopleController {
     }
 
     @PostMapping()
-    public String create(@ModelAttribute("person") @Valid Person person, BindingResult bindingResult){
+    public String create(@ModelAttribute("person") @Valid Person person, BindingResult bindingResult) throws SQLException {
         if(bindingResult.hasErrors()){
             return "people/new";
         }
